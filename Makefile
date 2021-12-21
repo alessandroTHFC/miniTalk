@@ -30,6 +30,8 @@ bonus:
 	make -s -C $(PRINTF)
 	gcc $(FLAGS) src/$(BSERVER) -o $(SERVER)
 	gcc $(FLAGS) src/$(BCLIENT) -o $(CLIENT)
+	@echo --Server Ready--
+	@echo --Client Ready--
 
 clean:
 	@make clean -s -C $(PRINTF)
