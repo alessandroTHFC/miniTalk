@@ -12,7 +12,9 @@ void	sigHandler(int signum, siginfo_t *siginfo, void *unused)
 	{	
 		ft_printf("%c", bitValue);
 		if(!bitValue)
+		{	
 			kill(siginfo->si_pid, SIGUSR1);
+		}	
 		bitValue = 0;
 		bitShift = 0;
 
@@ -23,9 +25,9 @@ void	welcomeMsg(void)
 {
 	pid_t	pid;
 	pid = getpid();
-	ft_printf("\t\t>>Server Up and Running<<\n\t\t>>Waiting for Client...<<\n");
-	ft_printf("\t\t  Process ID is: %i\n", pid);
-	ft_printf("\t   >>To run use ./client PID ""mesage""<<\n");
+	ft_printf("\t\t========Server Up and Running========\n\t\t========Waiting for Client...========\n");
+	ft_printf("\t\t\t Process ID is: %i\n", pid);
+	ft_printf("\t   ========To run use ./client PID ""mesage""========\n");
 
 }
 
